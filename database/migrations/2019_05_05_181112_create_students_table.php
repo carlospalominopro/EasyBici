@@ -19,6 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('name_st');
             $table->string('surname_st');
             $table->string('email');
+            $table->string('photo_st');
             $table->integer('status_id')->usigned();
             $table->foreign('status_id')->references('status_id')->on('statuses');
             $table->timestamps();

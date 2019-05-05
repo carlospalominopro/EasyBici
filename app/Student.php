@@ -14,6 +14,7 @@ class Estudiante extends Model
         'name_st',
         'surname_st',
         'email',
+        'photo_st',
         'status_id',
     ];
 
