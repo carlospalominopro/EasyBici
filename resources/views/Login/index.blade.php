@@ -44,19 +44,6 @@
 <body>
 
 
-@foreach($estudiante as $st)
-
-@php
-
-	echo "<pre>";
-	print_r($st);
-
-
-@endphp
-
-
-@endforeach
-
 
 
 <div class="tables">
@@ -70,32 +57,18 @@
     </thead>
     <tbody>
 
-    	@for($i=0; $i<10; $i++)
+    	@foreach ($estudiante as $key =>$value )
+        
+    
+        <tr>
+            <td>{!! $estudiante[$key]->cod_st !!}</td>
+            <td>{!! $estudiante[$key]->name_st !!}</td>
+            
+        </tr>
+        
+        @endforeach
 
 
-
-        <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row x Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row d Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2sf Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row fafjashfafd Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-
-        @endfor
     </tbody>
 </table>
 

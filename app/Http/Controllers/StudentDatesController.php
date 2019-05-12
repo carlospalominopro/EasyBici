@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\Student;
 
 
 class StudentDatesController extends Controller
@@ -13,14 +14,9 @@ class StudentDatesController extends Controller
 	{
 
 
-		// $estudiante = \app\Models\Student::select('cod_st','name_st')->get();
-
-		echo "<pre>";
-		print_r($estudiante); exit();
-
+		//$estudiante = \app\Models\Student::select('cod_st','name_st')->get();
 		
-		// $estudiante = \DB::table('Student')
-  //           ->select(\DB::raw('cod_st, name_st'))->get();
+		$estudiante = \DB::table('Student')->select(\DB::raw('cod_st, name_st'))->get();
 
 
 
