@@ -11,19 +11,10 @@
 |
 */
 
-
-
-
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout');
-
-
-
 /*Route::get('/Home', 'BiciUserController@index');
 Route::post('/Home', 'BiciUserController@indexpost');*/
-
 Auth::routes();
-
-
 Route::get('/home', 'HomeController@index')->name('home');

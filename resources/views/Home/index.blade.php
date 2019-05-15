@@ -1,11 +1,18 @@
+
+                    
+
 <!DOCTYPE html>
 <html>
 
+<<<<<<< HEAD:resources/views/home.blade.php
     @include('layouts.app')
 
     @include('Layouts/bootstrap')
 
 
+=======
+    @include('Layouts/bootstrap')
+>>>>>>> 8212ef84895074591890679071e4c8de54a735d5:resources/views/Home/index.blade.php
 
     {!! Html::style('css/app.css') !!}
 
@@ -108,5 +115,58 @@
         $('#btn').click( function () {
             table.row('.selected').remove().draw( false );
         } );
+<<<<<<< HEAD:resources/views/home.blade.php
     } );
     </script>
+=======
+
+	} );
+
+	</script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <table id="table_id" class="display table">
+    
+        <thead>
+            <tr class="table-primary">
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                <th>Marca bici</th>
+                <th>Estado</th>
+
+            </tr>
+        </thead>
+        <tbody>
+    
+            @foreach ($user as $key =>$value )
+             
+            <tr class="table-success" >
+
+                <td>{!! $user[$key]->cod_bu !!}</td>
+                <td>{!! $user[$key]->name_bu !!}</td>
+                <td>{!! $user[$key]->surname_bu !!}</td>
+                <td>{!! $user[$key]->email !!}</td>
+                <td>{!! $user[$key]->name_type !!}</td>
+                <td>{!! $user[$key]->brand_bike !!}</td>
+                <td>{!! $user[$key]->name_status !!}</td>
+                
+            </tr>
+            
+            @endforeach
+    
+            <button type="button" id="btn" class="btn btn-danger">Danger</button>
+    
+        </tbody>
+    </table>
+</div>
+>>>>>>> 8212ef84895074591890679071e4c8de54a735d5:resources/views/Home/index.blade.php
+
+
+
