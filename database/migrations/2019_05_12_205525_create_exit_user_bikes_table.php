@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatusesTable extends Migration
+class CreateExitUserBikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('statuses', function (Blueprint $table) {
-            
-            $table->integer('id_bike')->index('id_bike_status')->primary('id_bike');
-            $table->integer('cod_bu')->index('status_user');
-            $table->string('name_status');
+        Schema::create('exit_user_bike', function (Blueprint $table) {
+
+            $table->dateTime('date_exit')->primary('date_exit');
+            $table->integer('cod_bu')->index('fk_cod_bu_e');
             
             
         });
@@ -30,6 +29,6 @@ class CreateStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statuses');
+        Schema::dropIfExists('exit_user_bikes');
     }
 }

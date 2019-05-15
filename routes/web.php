@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/', 'StudentDatesController@index');
+Route::get('/', 'BiciUserController@index');
+Route::post('/', 'BiciUserController@indexpost');

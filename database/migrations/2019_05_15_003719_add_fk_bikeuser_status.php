@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatusesTable extends Migration
+class AddFkBikeuserStatus extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('statuses', function (Blueprint $table) {
+        Schema::table('statuses', function (Blueprint $table) {
             
-            $table->integer('id_bike')->index('id_bike_status')->primary('id_bike');
-            $table->integer('cod_bu')->index('status_user');
-            $table->string('name_status');
-            
+            $table->foreign('cod_bu')->references('cod_bu')->on('bike_users')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            $table->foreign('id_bike')->references('id_bike')->on('bike_information_user')->onUpdate('RESTRICT')->onDelete('RESTRICT');  
             
         });
     }
@@ -30,6 +28,6 @@ class CreateStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statuses');
+        //
     }
 }

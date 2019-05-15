@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html>
-	
 
+    @include('Layouts/bootstrap');
 
+    {!! Html::style('css/app.css') !!}
 
 <head>
 	
 	<title>LOGIN ADMIN</title>
-
-	{!! Html::style('css/app.css') !!}
-
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-
-	<link rel="stylesheet" type="text/css" href="public/css/app.css">
-
-	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js">
-	</script>
 
 	<script type="text/javascript" charset="utf-8">
 	
@@ -25,34 +15,62 @@
 
     	$('#table_id').DataTable({
         "language": {
-            "lengthMenu": "Mostrar _MENU_ registros por pagina",
-            "zeroRecords": "Nothing found - sorry",
-            "info": "Showing page _PAGE_ of _PAGES_",
-            "infoEmpty": "No records available",
+            "sProcessing":     "Procesando...",
+    "sLengthMenu":     "Mostrar _MENU_ registros",
+    "sZeroRecords":    "No se encontraron resultados",
+    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+    "sInfoPostFix":    "",
+    "sSearch":         "Buscar:",
+    "sUrl":            "",
+    "sInfoThousands":  ",",
+    "sLoadingRecords": "Cargando...",
+    "oPaginate": {
+        "sFirst":    "Primero",
+        "sLast":     "Último",
+        "sNext":     "Siguiente",
+        "sPrevious": "Anterior"
+    },
+    "oAria": {
+        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+    }
         }
     } );
 
-	} );
+        var table = $('#table_id').DataTable();
+ 
+        $('#table_id tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        } );
+     
+        $('#btn').click( function () {
+            table.row('.selected').remove().draw( false );
+        } );
 
+	} );
 
 	</script>
 
 </head>
 
-
-
 <body>
 
+<table id="table_id" class="display">
 
-
-
-<div class="tables">
-
-<table id="table_id" class="display tables2">
     <thead>
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>
@@ -63,16 +81,17 @@
         <tr>
             <td>{!! $estudiante[$key]->cod_st !!}</td>
             <td>{!! $estudiante[$key]->name_st !!}</td>
+            <td>xd</td>
             
         </tr>
         
         @endforeach
 
+        <button type="button" id="btn" class="btn btn-danger">Danger</button>
 
     </tbody>
 </table>
 
-</div>
 
 </body>
 </html>

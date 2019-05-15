@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatusesTable extends Migration
+class AddFkTypeBikeUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('statuses', function (Blueprint $table) {
+        Schema::table('bike_users', function (Blueprint $table) {
             
-            $table->integer('id_bike')->index('id_bike_status')->primary('id_bike');
-            $table->integer('cod_bu')->index('status_user');
-            $table->string('name_status');
-            
+            $table->foreign('id_type')->references('id_type')->on('types')->onUpdate('RESTRICT')->onDelete('RESTRICT');  
             
         });
     }
@@ -30,6 +27,6 @@ class CreateStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statuses');
+        //
     }
 }
