@@ -1,0 +1,13 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch carlos
+# Your branch is up to date with 'origin/carlos'.
+#
+# Changes to be committed:
+#	modified:   database/migrations/2014_10_12_000000_create_users_table.php
+#	new file:   database/migrations/estudiante.php
+#	modified:   public/index.php
+#	new file:   resources/views/index.blade.php
+#
