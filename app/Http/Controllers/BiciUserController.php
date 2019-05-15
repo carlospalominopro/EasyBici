@@ -16,12 +16,16 @@ class BiciUserController extends Controller
     {
         //$estudiante = \App\Models\BiciUser::select('cod_st','name_st')->get();
         
-        $estudiante = \DB::table('bike_users')->select(\DB::raw('cod_bu, name_bu'))->get();
+        $user = \DB::table('bike_users')
+        ->select(\DB::raw('bike_users.cod_bu, name_bu, surname_bu, email, name_type, brand_bike, name_status'))
+        ->join('types','bike_users.id_type','types.id_type')
+        ->join('bike_information_user','bike_users.cod_bu','bike_information_user.cod_bu')
+        ->join('statuses','bike_information_user.id_bike','statuses.id_bike')->get();
 
 
 
-        return view('Login.index')
-            ->with(['estudiante' => $estudiante]);
+        return view('Home.index')
+            ->with(['user' => $user]);
     }
 
     /**

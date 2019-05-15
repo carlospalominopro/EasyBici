@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-    @include('Layouts/bootstrap');
+    @include('Layouts/bootstrap')
 
     {!! Html::style('css/app.css') !!}
 
@@ -64,33 +64,44 @@
 
 <body>
 
-<table id="table_id" class="display">
-
-    <thead>
-        <tr>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Acción</th>
-        </tr>
-    </thead>
-    <tbody>
-
-    	@foreach ($estudiante as $key =>$value )
-        
+<div class="container">
+    <table id="table_id" class="display table">
     
-        <tr>
-            <td>{!! $estudiante[$key]->cod_st !!}</td>
-            <td>{!! $estudiante[$key]->name_st !!}</td>
-            <td>xd</td>
+        <thead>
+            <tr class="table-primary">
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                <th>Marca bici</th>
+                <th>Estado</th>
+
+            </tr>
+        </thead>
+        <tbody>
+    
+            @foreach ($user as $key =>$value )
+             
+            <tr class="table-success" >
+
+                <td>{!! $user[$key]->cod_bu !!}</td>
+                <td>{!! $user[$key]->name_bu !!}</td>
+                <td>{!! $user[$key]->surname_bu !!}</td>
+                <td>{!! $user[$key]->email !!}</td>
+                <td>{!! $user[$key]->name_type !!}</td>
+                <td>{!! $user[$key]->brand_bike !!}</td>
+                <td>{!! $user[$key]->name_status !!}</td>
+                
+            </tr>
             
-        </tr>
-        
-        @endforeach
-
-        <button type="button" id="btn" class="btn btn-danger">Danger</button>
-
-    </tbody>
-</table>
+            @endforeach
+    
+            <button type="button" id="btn" class="btn btn-danger">Danger</button>
+    
+        </tbody>
+    </table>
+</div>
 
 
 </body>

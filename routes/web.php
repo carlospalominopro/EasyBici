@@ -11,5 +11,13 @@
 |
 */
 
-Route::get('/', 'BiciUserController@index');
-Route::post('/', 'BiciUserController@indexpost');
+Route::get('/Home', 'BiciUserController@index');
+Route::post('/Home', 'BiciUserController@indexpost');
+
+//Route::get('public/Home', 'BiciUserController@index');
+
+/*
+Route::get('Home',function(){
+
+    return view('Home.index');
+});*/

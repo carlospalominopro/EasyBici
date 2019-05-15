@@ -35,8 +35,6 @@ class TypeUserSeeder extends Seeder
                 'id_type' => 4,
                 'name_type' => 'Otr@',
             ),
-
-
         ));
     }
 }
