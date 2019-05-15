@@ -15,7 +15,8 @@ class AddFkTypeBikeUsers extends Migration
     {
         Schema::table('bike_users', function (Blueprint $table) {
             
-            $table->foreign('id_type')->references('id_type')->on('types')->onUpdate('RESTRICT')->onDelete('RESTRICT');  
+            $table->foreign('id_type')->references('id_type')->on('types')->onUpdate('RESTRICT')->onDelete('RESTRICT');
+            
             
         });
     }

@@ -1,6 +1,4 @@
 
-                    
-
 <!DOCTYPE html>
 <html>
 
@@ -57,10 +55,14 @@
             
             @endforeach
     
-            {{-- <button type="button" id="btn" class="btn btn-danger">Danger</button> --}}
     
         </tbody>
     </table>
+
+    
+    <button onclick="window.location.href='{!! url('BikeUser') !!}'" type="button" id="btn" class="btn btn-success">Manipulación de registros</button>
+
+
 </div>
 
 </body>
@@ -108,9 +110,7 @@
             }
         } );
      
-        $('#btn').click( function () {
-            table.row('.selected').remove().draw( false );
-        } );
+        
     } );
     </script>
 

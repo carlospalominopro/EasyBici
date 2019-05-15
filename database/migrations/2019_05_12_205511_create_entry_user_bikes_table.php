@@ -17,6 +17,7 @@ class CreateEntryUserBikesTable extends Migration
             
             $table->dateTime('date_entry')->primary('date_entry');
             $table->integer('cod_bu')->index('fk_cod_bu_en');
+            $table->timestamps();
             
             
 

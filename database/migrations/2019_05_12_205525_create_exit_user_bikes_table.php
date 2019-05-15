@@ -17,6 +17,7 @@ class CreateExitUserBikesTable extends Migration
 
             $table->dateTime('date_exit')->primary('date_exit');
             $table->integer('cod_bu')->index('fk_cod_bu_e');
+            $table->timestamps();
             
             
         });

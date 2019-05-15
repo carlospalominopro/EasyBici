@@ -18,8 +18,9 @@ class CreateBikeUsersTable extends Migration
             $table->string('name_bu')->nullable(false);
             $table->string('surname_bu')->nullable(false);
             $table->string('email')->nullable(false);
-            $table->string('photo_bu')->nullable(false);
+            $table->string('gender')->nullable(false);
             $table->integer('id_type')->nullable(false);
+            $table->timestamps();
             
         });
     }
