@@ -1,19 +1,76 @@
+
+                    
+
 <!DOCTYPE html>
 <html>
 
-    @include('Layouts/bootstrap');
+    @include('layouts.app')
+
+    @include('Layouts/bootstrap')
+
+
 
     {!! Html::style('css/app.css') !!}
 
 <head>
-	
-	<title>LOGIN ADMIN</title>
+    
 
-	<script type="text/javascript" charset="utf-8">
-	
-	$(document).ready( function() {
 
-    	$('#table_id').DataTable({
+    <title>LOGIN ADMIN</title>
+
+    
+
+</head>
+
+<body>
+
+<div class="container">
+    <table id="table_id" class="display table">
+    
+        <thead>
+            <tr class="table-primary">
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                <th>Marca bici</th>
+                <th>Estado</th>
+
+            </tr>
+        </thead>
+        <tbody>
+    
+            @foreach ($user as $key =>$value )
+             
+            <tr class="table-success" >
+
+                <td>{!! $user[$key]->cod_bu !!}</td>
+                <td>{!! $user[$key]->name_bu !!}</td>
+                <td>{!! $user[$key]->surname_bu !!}</td>
+                <td>{!! $user[$key]->email !!}</td>
+                <td>{!! $user[$key]->name_type !!}</td>
+                <td>{!! $user[$key]->brand_bike !!}</td>
+                <td>{!! $user[$key]->name_status !!}</td>
+                
+            </tr>
+            
+            @endforeach
+    
+            {{-- <button type="button" id="btn" class="btn btn-danger">Danger</button> --}}
+    
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+
+<script type="text/javascript" charset="utf-8">
+    
+    $(document).ready( function() {
+        $('#table_id').DataTable({
         "language": {
             "sProcessing":     "Procesando...",
     "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -39,7 +96,6 @@
     }
         }
     } );
-
         var table = $('#table_id').DataTable();
  
         $('#table_id tbody').on( 'click', 'tr', function () {
@@ -55,44 +111,8 @@
         $('#btn').click( function () {
             table.row('.selected').remove().draw( false );
         } );
-
-	} );
-
-	</script>
-
-</head>
-
-<body>
-
-<table id="table_id" class="display">
-
-    <thead>
-        <tr>
-            <th>Codigo</th>
-            <th>Nombre</th>
-            <th>Acción</th>
-        </tr>
-    </thead>
-    <tbody>
-
-    	@foreach ($estudiante as $key =>$value )
-        
-    
-        <tr>
-            <td>{!! $estudiante[$key]->cod_st !!}</td>
-            <td>{!! $estudiante[$key]->name_st !!}</td>
-            <td>xd</td>
-            
-        </tr>
-        
-        @endforeach
-
-        <button type="button" id="btn" class="btn btn-danger">Danger</button>
-
-    </tbody>
-</table>
+    } );
+    </script>
 
 
-</body>
-</html>
 

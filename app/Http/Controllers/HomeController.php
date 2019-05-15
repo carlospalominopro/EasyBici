@@ -2,25 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use App\BiciUser;
 use Illuminate\Http\Request;
 
-class BiciUserController extends Controller
+class HomeController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Create a new controller instance.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-
     public function __construct()
     {
         $this->middleware('auth');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        
+        $user = \DB::table('bike_users')
+        ->select(\DB::raw('bike_users.cod_bu, name_bu, surname_bu, email, name_type, brand_bike, name_status'))
+        ->join('types','bike_users.id_type','types.id_type')
+        ->join('bike_information_user','bike_users.cod_bu','bike_information_user.cod_bu')
+        ->join('statuses','bike_information_user.id_bike','statuses.id_bike')->get();
+        return view('home')
+            ->with(['user' => $user]);
     }
 
     /**
