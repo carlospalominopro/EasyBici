@@ -64,18 +64,17 @@
 
 <body>
 
-<div class="container">
-    <table id="table_id" class="display table">
+    <table id="table_id" class="table table-striped table-bordered">
     
         <thead>
-            <tr class="table-primary">
-                <th>Codigo</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Tipo</th>
-                <th>Marca bici</th>
-                <th>Estado</th>
+            <tr>
+                <th >Codigo</th>
+                <th >Nombre</th>
+                <th >Apellido</th>
+                <th >Email</th>
+                <th >Tipo</th>
+                <th >Marca bici</th>
+                <th >Estado</th>
 
             </tr>
         </thead>
@@ -83,7 +82,7 @@
     
             @foreach ($user as $key =>$value )
              
-            <tr class="table-success" >
+            <tr>
 
                 <td>{!! $user[$key]->cod_bu !!}</td>
                 <td>{!! $user[$key]->name_bu !!}</td>
@@ -96,12 +95,9 @@
             </tr>
             
             @endforeach
-    
-            <button type="button" id="btn" class="btn btn-danger">Danger</button>
-    
+               
         </tbody>
     </table>
-</div>
 
 
 </body>
