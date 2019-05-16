@@ -11,19 +11,6 @@
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', 'BiciUserController@index');
-Route::post('/', 'BiciUserController@indexpost');
-
-//Route::get('public/Home', 'BiciUserController@index');
-
-/*
-Route::get('Home',function(){
-
-    return view('Home.index');
-});*/
-=======
-
 Route::get('/Login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/Login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout');
@@ -48,4 +35,4 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> master
+

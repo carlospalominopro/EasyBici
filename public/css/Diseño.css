@@ -39,9 +39,21 @@ body{font-family: 'Montserrat', sans-serif;}
 			text-align: center;
 
 		}
-			.logo a{	color: #fff; 	font-size: 25px;  letter-spacing: 2px;	}
+			.logo a{ text-decoration: none;	color: #fff; 	font-size: 25px;  letter-spacing: 2px;	}
 				
-				.logo a:hover{	font-size: 30px;	}
+			.Bici{
+				position: absolute;
+				top: 22px;
+				color: white;
+				text-decoration: none;
+				font-size: 25px;  
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-family: 'Montserrat', sans-serif;
+			}
+			.Bici:hover{
+				color: white;
+			}
 
 			.nav{
 

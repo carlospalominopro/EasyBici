@@ -62,37 +62,29 @@
 </head>
 
 <body>
-	
+		
 	<div class="Padre">
 			
 			<header class="header">
 
 				<div class="menu">				
-						
-
-						
-
+								
+						<div class="logo">
+						</div>
 
 						<nav class="nav">
-																				
-	
+																					
 						</nav>
-
-						
-
 						<div class="social">
 							
 							<div> 	
 									<a href="{!! url('Login') !!}"><i class="fas fa-toolbox"></i> ADMIN  </a> 
-									
-
 
 							</div>
 						</div>
 				
 				</div>
 	
-
 <div class="TextoPrincipal">
 					
 	<div class="Contenedor">
@@ -191,7 +183,7 @@
 
 	</div>
 
-	<a id="regisbici" class="xd" href="#"><i class="fas fa-bicycle"></i> Registro 	de Bici</a>
+	<a id="regisbici" class="Bici" href="#"><i class="fas fa-bicycle"></i> Registro 	de Bici</a>
 
 		<div  id="wrap3" class="wrap3">
 
@@ -265,9 +257,8 @@
 
 	</div>
 
+	<script src="formulario.js"></script>
 
-
-	<script src="../public/js/formulario.js"></script>	
 
 		<a id="ConsultaQR" href="#"> <i class="fas fa-qrcode"></i>  CONSULTA QR  	</a>
 
@@ -318,6 +309,7 @@
 	</header>
 
 </div>
+
 
 
 
