@@ -11,10 +11,25 @@
 |
 */
 
-Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/', 'Auth\LoginController@login');
+Route::get('/Login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/Login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout');
-/*Route::get('/Home', 'BiciUserController@index');
-Route::post('/Home', 'BiciUserController@indexpost');*/
+
+
+
+
+Route::get('/', 'RegisterUserController@index');
+
+Route::post('/registers', 'RegisterUserController@create');
+
+Route::post('/registersBike', 'RegisterBikeController@create');
+
+Route::post('/consulta', 'QueryController@index');
+
+Route::get('/BikeUser', 'BikeUserController@index');
+
+Route::get('/BikeUser/update', 'BikeUserController@update');
+Route::get('/BikeUser/destroy', 'BikeUserController@destroy');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

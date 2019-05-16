@@ -1,0 +1,278 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Roboto";
+}
+
+.Titulo{
+
+      color: #303F9F;
+      font-size: 12px;
+      text-align: center;
+      letter-spacing: 0px;
+      margin-bottom: 10px;
+}
+.Titulo1{
+
+      color: #303F9F;
+      font-size: 40px;
+      text-align: center;
+      font-family: Freestyle Script;
+      letter-spacing: 0px;
+      margin-bottom: 10px;
+}
+div.Contenedor #Registro{
+
+            position: absolute;
+            top: 30px;
+            right: 45%;
+            color:#fff;
+            font-size: 15px;      
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            word-spacing: 5px;
+}
+
+div.Contenedor #ConsultaQR{
+
+            position: absolute;
+            right: 25%;
+            top: 30px;
+            color:#fff;
+            font-size: 15px;      
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            word-spacing: 5px;
+
+}
+div.Contenedor .ImagenQR{
+  
+  position: absolute;
+  left: 150px;
+  top: 250px;
+  background-color: #fff;
+  padding: 10px;
+
+}
+
+div.Contenedor .ImagenQR input[type="submit"] {
+  
+
+  position: absolute;
+  right: 100%;
+  top: 350px;
+  border: 1px solid #303F9F;
+
+}
+
+
+#wrap{
+
+  position:  absolute;
+  top: 150px;
+  left: 30em;
+  width: 30%;
+  max-width: 500px;
+  padding: 20px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 0px 3px grey;
+  border-radius: 20px;
+  display: none;
+}
+
+#wrap2{
+
+  position:absolute;
+  top: 150px;
+  left: 30em;
+  width: 30%;
+  max-width: 500px;
+  padding: 20px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 0px 3px grey;
+  border-radius: 20px;
+  display: none;
+
+}
+#wrap3{
+
+  position:absolute;
+  top: 150px;
+  left: 30em;
+  width: 30%;
+  max-width: 500px;
+  padding: 20px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 0px 3px grey;
+  border-radius: 20px;
+  display: none;
+}
+
+.Contenedor{
+
+  width: 90%;
+  color: #f2f2f2;
+  padding: 40px;
+
+}
+
+.Contenedor .Formulario{
+  width: 90%;
+  margin: auto;
+}
+
+.Contenedor .Formulario .input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+.Contenedor .Formulario .input-group input[type="number"],
+.Contenedor .Formulario .input-group input[type="text"],
+.Contenedor .Formulario .input-group input[type="email"]{
+
+  font-family: "Roboto";
+  font-size: 10px;
+  color: #303F9F;
+  width: 100%;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #BBDEFB;
+}
+
+.Contenedor .Formulario .input-group input[type="number"]:focus,
+.Contenedor .Formulario .input-group input[type="number"]:active,
+.Contenedor .Formulario .input-group input[type="text"]:focus, 
+.Contenedor .Formulario .input-group input[type="text"]:active,
+.Contenedor .Formulario .input-group input[type="email"]:focus,
+.Contenedor .Formulario .input-group input[type="email"]:active{
+
+  outline: none;
+  border-bottom: 2px solid #303F9F;
+
+}
+.Contenedor .Formulario .input-group input[type="number"].error,
+.Contenedor .Formulario  .input-group input[type="text"].error,
+.Contenedor .Formulario  .input-group input[type="email"].error{
+  border-bottom: 2px solid #D32F2F;
+}
+
+.Contenedor .Formulario .input-group input[type="number"].error + label,
+ .Contenedor .Formulario .input-group input[type="text"].error + label,
+.Contenedor .Formulario  .input-group input[type="email"].error + label{
+  color: #D32F2F;
+}
+
+.Contenedor .Formulario  .input-group label {
+  color: #303F9F;
+}
+
+.Contenedor .Formulario  .input-group label.label {
+
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  font-size: 10px;
+  line-height: 16px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+
+}
+
+.Contenedor .Formulario  .input-group label.label.active {
+  top: -2px;
+  font-size: 8px;
+  line-height: 12px;
+  color: #B6B6B6;
+}
+
+.Contenedor .Formulario .input-group.checkbox label, 
+.Contenedor .Formulario  .input-group.radio label {
+  display: inline-block;
+  cursor: pointer;
+  color: #303F9F;
+  position: relative;
+  padding: 5px 15px 5px 51px;
+  font-size: 12px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.Contenedor .Formulario  .input-group.checkbox label:hover, 
+.Contenedor .Formulario  .input-group.radio label:hover {
+  background: #bbdefb;
+}
+
+.Contenedor .Formulario  .input-group.checkbox label:before, 
+.Contenedor .Formulario  .input-group.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 15px;
+  border-radius: 50%;
+  background: none;
+  border: 2px solid #303F9F;
+}
+
+.Contenedor .Formulario  .input-group.error label {
+  color: #D32F2F;
+}
+.Contenedor .Formulario  .input-group.error label:hover {
+  background: rgba(211, 47, 47, 0.2);
+}
+.Contenedor .Formulario  .input-group.error label:before {
+  border: 2px solid #D32F2F;
+}
+.Contenedor .Formulario .input-group.radio input[type="radio"] {
+  display: none;
+}
+.Contenedor .Formulario  .input-group.radio input[type="radio"]:checked + label:before {
+  display: none;
+}
+.Contenedor .Formulario .input-group.radio input[type="radio"]:checked + label {
+  padding: 5px 15px;
+  background: #303F9F;
+  border-radius: 2px;
+  color: #f2f2f2;
+}
+.Contenedor .Formulario  .input-group.checkbox label:before {
+  border-radius: 3px;
+}
+.Contenedor .Formulario  .input-group.checkbox input[type="checkbox"] {
+  display: none;
+}
+.Contenedor .Formulario  .input-group.checkbox input[type="checkbox"]:checked + label:before {
+  display: none;
+}
+.Contenedor .Formulario .input-group.checkbox input[type="checkbox"]:checked + label {
+  background: #303F9F;
+  color: #f2f2f2;
+  padding: 5px 15px;
+}
+.Contenedor .Formulario  input[type="submit"] {
+  background: #303F9F;
+  border-radius: 1px;
+  border: 2px solid #f2f2f2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", Arial;
+  font-size: 12px;
+  padding: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.Contenedor .Formulario o input[type="submit"]:hover {
+  background: #1976D2;
+}

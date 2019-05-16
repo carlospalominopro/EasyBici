@@ -1,18 +1,23 @@
-
-                    
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html>
 
+<<<<<<< HEAD:resources/views/Home/index.blade.php
 <<<<<<< HEAD:resources/views/home.blade.php
+=======
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e:resources/views/home.blade.php
     @include('layouts.app')
 
     @include('Layouts/bootstrap')
 
 
+<<<<<<< HEAD:resources/views/Home/index.blade.php
 =======
     @include('Layouts/bootstrap')
 >>>>>>> 8212ef84895074591890679071e4c8de54a735d5:resources/views/Home/index.blade.php
+=======
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e:resources/views/home.blade.php
 
     {!! Html::style('css/app.css') !!}
 
@@ -61,10 +66,14 @@
             
             @endforeach
     
-            {{-- <button type="button" id="btn" class="btn btn-danger">Danger</button> --}}
     
         </tbody>
     </table>
+
+    
+    <button onclick="window.location.href='{!! url('BikeUser') !!}'" type="button" id="btn" class="btn btn-success">Manipulación de registros</button>
+
+
 </div>
 
 </body>
@@ -75,6 +84,24 @@
     
     $(document).ready( function() {
         $('#table_id').DataTable({
+=======
+<!DOCTYPE html>
+<html>
+
+    @include('Layouts/bootstrap')
+
+    {!! Html::style('css/app.css') !!}
+
+<head>
+	
+	<title>LOGIN ADMIN</title>
+
+	<script type="text/javascript" charset="utf-8">
+	
+	$(document).ready( function() {
+
+    	$('#table_id').DataTable({
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e
         "language": {
             "sProcessing":     "Procesando...",
     "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -100,6 +127,10 @@
     }
         }
     } );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e
         var table = $('#table_id').DataTable();
  
         $('#table_id tbody').on( 'click', 'tr', function () {
@@ -112,6 +143,8 @@
             }
         } );
      
+<<<<<<< HEAD
+<<<<<<< HEAD:resources/views/Home/index.blade.php
         $('#btn').click( function () {
             table.row('.selected').remove().draw( false );
         } );
@@ -119,6 +152,11 @@
     } );
     </script>
 =======
+=======
+        $('#btn').click( function () {
+            table.row('.selected').remove().draw( false );
+        } );
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e
 
 	} );
 
@@ -128,6 +166,7 @@
 
 <body>
 
+<<<<<<< HEAD
 <div class="container">
     <table id="table_id" class="display table">
     
@@ -140,6 +179,19 @@
                 <th>Tipo</th>
                 <th>Marca bici</th>
                 <th>Estado</th>
+=======
+    <table id="table_id" class="table table-striped table-bordered">
+    
+        <thead>
+            <tr>
+                <th >Codigo</th>
+                <th >Nombre</th>
+                <th >Apellido</th>
+                <th >Email</th>
+                <th >Tipo</th>
+                <th >Marca bici</th>
+                <th >Estado</th>
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e
 
             </tr>
         </thead>
@@ -147,7 +199,11 @@
     
             @foreach ($user as $key =>$value )
              
+<<<<<<< HEAD
             <tr class="table-success" >
+=======
+            <tr>
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e
 
                 <td>{!! $user[$key]->cod_bu !!}</td>
                 <td>{!! $user[$key]->name_bu !!}</td>
@@ -160,6 +216,7 @@
             </tr>
             
             @endforeach
+<<<<<<< HEAD
     
             <button type="button" id="btn" class="btn btn-danger">Danger</button>
     
@@ -167,6 +224,20 @@
     </table>
 </div>
 >>>>>>> 8212ef84895074591890679071e4c8de54a735d5:resources/views/Home/index.blade.php
+=======
+        
+    } );
+    </script>
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e:resources/views/home.blade.php
 
 
+=======
+               
+        </tbody>
+    </table>
+
+
+</body>
+</html>
+>>>>>>> 2e69840782bdc943e6e33652da6eade9da6db64e
 

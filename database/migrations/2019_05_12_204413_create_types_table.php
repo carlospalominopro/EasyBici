@@ -18,6 +18,7 @@ class CreateTypesTable extends Migration
             
             $table->integer('id_type')->index('fk_id_type')->primary('id_type');
             $table->string('name_type');  
+            $table->timestamps();
         
 
         });
