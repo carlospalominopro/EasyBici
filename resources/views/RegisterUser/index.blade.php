@@ -139,11 +139,11 @@
 	        </div>
 
 
-			<div class="form-group">
+			<div class="input-group">
 
-			    <label for="exampleFormControlSelect1" style="color:blue;">Tipo de Usuario</label>
+			    <label class="label" for="exampleFormControlSelect1" >Tipo de Usuario</label>
 
-			    	<select class="form-control" id="exampleFormControlSelect1" name="type">
+			    	<select class="persona form-control" id="exampleFormControlSelect1" name="type">
 
 				      <option value="1">{!! $type[0]->name_type!!}</option>
 				      <option value="2">{!! $type[1]->name_type!!}</option>
