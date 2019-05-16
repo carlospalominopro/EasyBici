@@ -57,6 +57,8 @@
 			   });
 			});
 		</script>
+
+		<script src="../public/js/formulario.js"></script>
 	
 
 </head>
@@ -267,7 +269,7 @@
 
 
 
-	<script src="../public/js/formulario.js"></script>	
+		
 
 		<a id="ConsultaQR" href="#"> <i class="fas fa-qrcode"></i>  CONSULTA QR  	</a>
 
