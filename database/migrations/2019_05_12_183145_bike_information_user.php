@@ -22,6 +22,7 @@ class BikeInformationUser extends Migration
             $table->string('color_bike')->nullable(false);
             $table->string('photo_bike')->nullable(false);          
             $table->string('brand_bike')->nullable(false);
+            $table->timestamps();
         });
     }
 

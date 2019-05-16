@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Eloquent as Model;
 
 class Statuses extends Model
 {
-    protected $table = "statuses";
-    protected $primaryKey = "status_id";
+    public $table = 'statuses';
 
-    protected $fillable = [
-        'status_id',
-        'name_status',
+
+	public $fillable = [
+
+        'id_bike', 'cod_bu', 'name_status',
     ];
 }

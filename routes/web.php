@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', 'BiciUserController@index');
 Route::post('/', 'BiciUserController@indexpost');
 
@@ -21,3 +22,30 @@ Route::get('Home',function(){
 
     return view('Home.index');
 });*/
+=======
+
+Route::get('/Login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/Login', 'Auth\LoginController@login');
+Route::post('/logout', 'Auth\LoginController@logout');
+
+
+
+
+Route::get('/', 'RegisterUserController@index');
+
+Route::post('/registers', 'RegisterUserController@create');
+
+Route::post('/registersBike', 'RegisterBikeController@create');
+
+Route::post('/consulta', 'QueryController@index');
+
+Route::get('/BikeUser', 'BikeUserController@index');
+
+Route::get('/BikeUser/update', 'BikeUserController@update');
+Route::get('/BikeUser/destroy', 'BikeUserController@destroy');
+
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> master

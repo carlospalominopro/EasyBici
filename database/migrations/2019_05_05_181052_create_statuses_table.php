@@ -18,6 +18,7 @@ class CreateStatusesTable extends Migration
             $table->integer('id_bike')->index('id_bike_status')->primary('id_bike');
             $table->integer('cod_bu')->index('status_user');
             $table->string('name_status');
+            $table->timestamps();
             
             
         });
