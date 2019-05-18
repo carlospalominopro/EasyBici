@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class HomeIndexController extends Controller
 {
    
     public function __construct()
@@ -14,7 +14,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        
         
         $user = \App\Models\BikeUser::select('*')
         ->join('types','bike_users.id_type','types.id_type')

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-@include('Layouts/bootstrap')
-
-{!! Html::style('css/Diseño.css') !!}
-{!! Html::style('css/Diseño2.css') !!}
-
 <head>
+
+	@include('Layouts/bootstrap')
+
+	{!! Html::style('css/Diseno.css') !!}
+	{!! Html::style('css/Diseno2.css') !!}
 
 	<title>REGISTRA TU  BICI</title>
 
@@ -31,14 +31,11 @@
 		<script>
 			$(function(){
 		       $('#ConsultaQR').click(function(){
-
 			   $(this).next('#wrap2').slideToggle();
 			   $(this).toggleClass('active');
-
 			   $('#wrap3').hide();
 			   $('#wrap').hide(); 
 			  
-
 			   });
 			});
 		</script>
@@ -46,19 +43,14 @@
 		<script>
 			$(function(){
 		       $('#regisbici').click(function(){
-
 			   $(this).next('#wrap3').slideToggle();
 			   $(this).toggleClass('active'); 
-
 			   $('#wrap2').hide();
 			   $('#wrap').hide();
 			 
-
 			   });
 			});
 		</script>
-
-		<script src="../public/js/formulario.js"></script>
 	
 
 </head>
@@ -110,7 +102,7 @@
 
 			<div class="input-group">
 
-			<input type="number" id="id" name="id">
+			<input type="number" id="id" name="id" required>
 		
 			<label class="label" for="id">Codigo Usuario:</label> 			
 
@@ -118,7 +110,7 @@
 			
 			<div class="input-group">
 
-			<input type="text" id="nombre" name="nombre">
+			<input type="text" id="nombre" name="nombre" required>
 
 			<label class="label" for="nombre">Nombre:</label> 
 
@@ -126,7 +118,7 @@
 			
 			<div class="input-group">
 
-			<input type="text" id="apellido" name="apellido">
+			<input type="text" id="apellido" name="apellido" required>
 
 			<label class="label" for="apellido">Apellido:</label> 
 
@@ -134,7 +126,7 @@
 
 			<div class="input-group">
 	        
-			<input type="email" id="email" name="email">
+			<input type="email" id="email" name="email" required>
 
 			<label class="label" for="email">Email   </label> 
 
@@ -145,7 +137,7 @@
 
 			    <label class="label" for="exampleFormControlSelect1" >Tipo de Usuario</label>
 
-			    	<select class="persona form-control" id="exampleFormControlSelect1" name="type">
+			    	<select class="persona form-control" id="exampleFormControlSelect1" name="type" required>
 
 				      <option value="1">{!! $type[0]->name_type!!}</option>
 				      <option value="2">{!! $type[1]->name_type!!}</option>
@@ -260,6 +252,7 @@
 	</div>
 
 	<script src="formulario.js"></script>
+
 
 		<a id="ConsultaQR" href="#"> <i class="fas fa-qrcode"></i>  CONSULTA QR  	</a>
 

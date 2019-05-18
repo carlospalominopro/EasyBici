@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/Login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/Login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout');
@@ -32,4 +33,6 @@ Route::get('/BikeUser/update', 'BikeUserController@update');
 Route::get('/BikeUser/destroy', 'BikeUserController@destroy');
 
 Auth::routes();
+
+
 Route::get('/home', 'HomeController@index')->name('home');

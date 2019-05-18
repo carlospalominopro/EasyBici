@@ -1,10 +1,22 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
 
-@include('Layouts/bootstrap');
 
-{!! Html::style('css/app.css') !!}
+<head>
+    
+    @include('Layouts/app')
 
-@section('content')
+    @include('Layouts/bootstrap')
+    
+    {!! Html::style('css/app.css') !!}
+    
+    
+</head>
+
+<body>
+
+
+<section class="content">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -25,4 +37,6 @@
         </div>
     </div>
 </div>
-@endsection
+</section>
+</body>
+</html>

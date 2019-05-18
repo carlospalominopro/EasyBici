@@ -139,14 +139,14 @@ div.Contenedor .ImagenQR input[type="submit"] {
 .Contenedor .Formulario .input-group input[type="email"]{
 
   font-family: "Roboto";
-  font-size: 10px;
+  font-size: 15px;
   color: #303F9F;
   width: 100%;
   outline: none;
   padding: 15px;
   background: none;
   border: none;
-  border-bottom: 2px solid #BBDEFB;
+  border-bottom: 2px solid #BBDEFB5
 }
 
 .Contenedor .Formulario .input-group input[type="number"]:focus,

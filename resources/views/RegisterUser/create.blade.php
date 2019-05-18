@@ -4,8 +4,8 @@
 
 	@include('Layouts/bootstrap')
 
-	{!! Html::style('css/Diseño.css') !!}
-	{!! Html::style('css/Diseño2.css') !!}
+	{!! Html::style('css/Diseno.css') !!}
+	{!! Html::style('css/Diseno2.css') !!}
 
 	<title>Asignación QR</title>
 </head>
@@ -16,6 +16,7 @@
 		<script type="text/javascript">
 			
 			alert("Error de Registro");
+			window.location='{{ url('') }}';
 
 		</script>
 
@@ -30,7 +31,7 @@
 		<script>
 		
 			function inicio(enla) {
-			 	window.location='/EasyBici/public';
+			 	window.location='{{ url('') }}';
 			}
 
 		</script>
@@ -65,7 +66,7 @@
 
 			$codigo=$id;
 
-			@include('../phpqrcode/qrlib.php');
+			@include('phpqrcode/qrlib.php');
 
 			$dir='temp/';
 

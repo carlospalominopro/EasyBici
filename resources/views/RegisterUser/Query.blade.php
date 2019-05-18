@@ -3,8 +3,8 @@
 <head>
 	@include('Layouts/bootstrap')
 
-	{!! Html::style('css/Diseño.css') !!}
-	{!! Html::style('css/Diseño2.css') !!}
+	{!! Html::style('css/Diseno.css') !!}
+	{!! Html::style('css/Diseno2.css') !!}
 
 	<title>Consulta QR</title>
 
@@ -17,7 +17,7 @@
 		<script type="text/javascript">
 			
 			alert("Error de Registro");
-			window.location='/EasyBici/public';
+			window.history.back();
 
 		</script>
 

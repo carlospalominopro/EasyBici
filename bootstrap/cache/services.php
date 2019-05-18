@@ -37,6 +37,11 @@
     33 => 'App\\Providers\\AuthServiceProvider',
     34 => 'App\\Providers\\EventServiceProvider',
     35 => 'App\\Providers\\RouteServiceProvider',
+    36 => 'Collective\\Html\\HtmlServiceProvider',
+    37 => 'Laracasts\\Flash\\FlashServiceProvider',
+    38 => 'Prettus\\Repository\\Providers\\RepositoryServiceProvider',
+    39 => 'InfyOm\\Generator\\InfyOmGeneratorServiceProvider',
+    40 => 'InfyOm\\AdminLTETemplates\\AdminLTETemplatesServiceProvider',
   ),
   'eager' => 
   array (
@@ -61,6 +66,10 @@
     18 => 'App\\Providers\\AuthServiceProvider',
     19 => 'App\\Providers\\EventServiceProvider',
     20 => 'App\\Providers\\RouteServiceProvider',
+    21 => 'Laracasts\\Flash\\FlashServiceProvider',
+    22 => 'Prettus\\Repository\\Providers\\RepositoryServiceProvider',
+    23 => 'InfyOm\\Generator\\InfyOmGeneratorServiceProvider',
+    24 => 'InfyOm\\AdminLTETemplates\\AdminLTETemplatesServiceProvider',
   ),
   'deferred' => 
   array (
